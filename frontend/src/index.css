@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hero-bg{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0,0,0,0.3)) ,url("Hero.jpg");
+}
+
+
+.glow-on-hover {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 1;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff0000, 0 0 35px #ff0000, 0 0 40px #ff0000, 0 0 50px #ff0000, 0 0 75px #ff0000;
+}
+
+.glow-on-hover:hover:after {
+  background: transparent;
+}
+
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+.shimmer{
+  animation: shimmer 2s infinite linear;
+  background: linear-gradient(to right, #2c2c2c 4%, #333 25%, #2c2c2c 36%);
+  background-size: 1000px 100%;
+}
+
+@keyframes shimmer {
+  0%{
+    background-position: -1000px 0;
+  }
+  100%{
+    background-position: 1000px 0;
+  }
+}
+
+.glow-info {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.glow-info:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 1;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-info:active {
+  color: #000;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff0000, 0 0 35px #ff0000, 0 0 40px #ff0000, 0 0 50px #ff0000, 0 0 75px #ff0000;
+}
+
+.glow-info:hover:after {
+  opacity: 90%;
+}
+
+
+.glow-info:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(107 114 128);
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+.bungee-tint-regular {
+  font-family: "Bungee Tint", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
