@@ -3,8 +3,7 @@ import ReactPlayer from 'react-player/youtube';
 import './VideoPlayer.css'; // Import your custom CSS file
 import { BiSolidMoviePlay, BiSolidVolumeFull, BiExitFullscreen, BiFullscreen, BiSolidVolumeMute } from 'react-icons/bi';
 import PlayButton from './PlayButton';
-import { parse } from 'dotenv';
-import { set } from 'mongoose';
+
 
 const VideoPlayer = ({ trailers, currentTrailerIdx }) => {
   const [playing, setPlaying] = useState(true);
